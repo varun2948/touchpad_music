@@ -10,8 +10,8 @@ const cells = Array.from({ length: 64 }, () => ({
 function Keyboard(props) {
   return (
     <div className="keyboardGrid">
-      {cells.map((c) => (
-        <Cell color={c.color} />
+      {cells.map((c, i) => (
+        <Cell key={i} color={c.color} />
       ))}
     </div>
   );

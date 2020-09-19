@@ -1,9 +1,17 @@
 .main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
   display: grid;
   grid-template-rows: 1fr 8fr 1fr;
   grid-template-columns: 1fr 8fr 1fr;
-  width: 80vmin;
-  height: 80vmin;
+  width: 90vmin;
+  height: 90vmin;
+  min-width: 600px;
+  min-height: 600px;
   row-gap: 10px;
   column-gap: 10px;
 }

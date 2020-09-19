@@ -6,8 +6,10 @@ import Controls from "./components/Controls";
 function App() {
   return (
     <div className="main">
-      <Controls />
-      <Keyboard className="keyboard" />
+      <div className="container">
+        <Controls />
+        <Keyboard className="keyboard" />
+      </div>
     </div>
   );
 }

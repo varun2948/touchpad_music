@@ -6,15 +6,18 @@ import Cell from "./Cell";
 const controlList = [
   {
     className: "leftControl y-control",
-    controls: [{ icon: "up", value: "up" }],
+    key: "left",
+    controls: [{ icon: "up", key: "up" }],
   },
   {
     className: "rightControl y-control",
-    controls: [{ icon: "down", value: "down" }],
+    key: "right",
+    controls: [{ icon: "down", key: "down" }],
   },
   {
     className: "upControl x-control",
-    controls: [{ icon: "play", value: "play" }],
+    key: "up",
+    controls: [{ icon: "play", key: "play" }],
   },
 ];
 
@@ -23,9 +26,13 @@ function Controls(props) {
     <>
       {controlList.map((cl) => {
         return (
-          <div className={cl.className}>
+          <div key={cl.key} className={cl.className}>
             {cl.controls.map((c) => {
-              return <Cell color="#ccc">{c.icon}</Cell>;
+              return (
+                <Cell color="#ccc" key={c.key}>
+                  {c.icon}
+                </Cell>
+              );
             })}
           </div>
         );
